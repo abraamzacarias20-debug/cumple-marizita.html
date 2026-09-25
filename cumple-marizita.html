@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Feliz Cumpleaños Mi Marizita Linda 💖</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%);
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .contenedor { max-width: 900px; margin: 0 auto; }
+        
+        h1 {
+            color: #d63384;
+            font-size: 2rem;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: latido 1.5s infinite;
+        }
+        @keyframes latido {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        .mensaje-principal {
+            background: rgba(255,255,255,0.9);
+            padding: 30px;
+            border-radius: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(214, 51, 132, 0.2);
+            font-size: 1.4rem;
+            color: #b02a70;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+        
+        h2 {
+            color: #b02a70;
+            margin: 40px 0 20px;
+            font-size: 1.6rem;
+        }
+        
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        .galeria img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .galeria img:hover { transform: scale(1.05); }
+        
+        .caja-regalo {
+            background: rgba(255,255,255,0.95);
+            padding: 40px;
+            border-radius: 30px;
+            margin: 50px 0;
+            box-shadow: 0 8px 32px rgba(214, 51, 132, 0.25);
+        }
+        .boton-regalo {
+            background: linear-gradient(135deg, #ff6b9d, #d63384);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(214, 51, 132, 0.4);
+            transition: all 0.3s ease;
+        }
+        .boton-regalo:hover { transform: scale(1.08); }
+        
+        .contenido-sorpresa {
+            display: none;
+            margin-top: 30px;
+            animation: aparecer 1s ease forwards;
+        }
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ramo-img {
+            max-width: 350px;
+            width: 90%;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .frase-regalo {
+            font-size: 1.2rem;
+            color: #b02a70;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        .corazones {
+            margin-top: 20px;
+            font-size: 2rem;
+            animation: flotar 2s infinite;
+        }
+        @keyframes flotar {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .firma {
+            margin-top: 50px;
+            color: #d63384;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>🎂 ¡Feliz Cumpleaños Mi Marizita Linda! 🎂</h1>
+        
+        <div class="mensaje-principal">
+            Feliz cumpleaños mi marizita linda 💖<br>
+            te amo con todo mi ser<br>
+            mi vida preciosa 💕
+        </div>
+
+        <h2>📸 Nuestros Recuerdos Juntos ✨</h2>
+        <div class="galeria">
+            <img src="foto1.jpg" alt="Bien astetic💖">
+            <img src="foto2.jpg" alt="Con nuestras crias🧸💕">
+            <img src="foto3.jpg" alt="Patas JAJAJA">
+            <img src="foto4.jpg" alt="Bechitosh💗">
+            <img src="foto5.jpg" alt="Usted y yo para siempre💑">
+            <img src="foto6.jpg" alt="Awwwww🥺">
+            <img src="foto7.jpg" alt="Mmmmuuaaa💖">
+            <img src="foto8.jpg" alt="La mejor sensacion💕">
+            <img src="foto9.jpg" alt="Abrazaditosy acostaditos💖">
+            <img src="foto10.jpg" alt="Nunca me sueltes mi vida💞">
+        </div>
+
+        <div class="caja-regalo">
+            <h2>🎁 Tengo un regalo sorpresa para tu 🎁</h2>
+            <br>
+            <button class="boton-regalo" onclick="abrirRegalo()">
+                ✨ Toca aquí para abrir ✨
+            </button>
+            
+            <div class="contenido-sorpresa" id="sorpresa">
+                <img src="ramo.jpg" alt="Para tu mi peshosha💖" class="ramo-img">
+                <p class="frase-regalo">
+                    Siento mucho no darte un ramo físico amorcita 🥹<br>
+                    pero prometo que cuando se pueda<br>
+                    yo no dudaré en llenarte de flores siempre<br>
+                    mi vida 💗
+                </p>
+                <div class="corazones">💐💕💖💗💝</div>
+            </div>
+        </div>
+
+        <p class="firma">
+            Con todo mi amor, para ti siempre 💖<br>
+            — Tu persona que te ama con todo su ser 🫶
+        </p>
+    </div>
+
+    <script>
+        function abrirRegalo() {
+            document.getElementById('sorpresa').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
